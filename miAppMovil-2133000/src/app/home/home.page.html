@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      MiAppMovil-2133000
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -14,12 +14,15 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>2 Directiva: *ngIF <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <strong>2 Directiva: *ngIf </strong>
     <p *ngIf="variableA">(*ngIf="variableA") La variableA es verdadeda, por lo tanto puedes leer este parrafo</p>
     <p *ngIf="!variableA">La variableA es !verdadeda, por lo tanto NO se muestra este parrafo</p>
     <p *ngIf="variableB">La variableB es falsa, por lo tanto NO se muestra este parrafo</p>
     <p *ngIf="!variableB">(*ngIf="!variableB") La variableB es !falsa, por lo tanto puedes leer este parrafo</p>
-
+    <br><br>
+    <strong>3 Directiva: *ngFor </strong>
+    <div class="articulo" *ngFor="let articulo of variableC; index as i" >
+      <p>{{articulo}}:  {{variableD[i]}}</p>
+    </div>
   </div>
 </ion-content>

@@ -11,5 +11,9 @@ export class HomePage {
   //Variables que son Usadas para ngIF
   variableA: boolean=true;
   variableB: boolean=false;
+
+  //Variables que son Usadas para ngFor
+  variableC: any = ["Articulo 1", "Articulo 2", "Articulo 3","Articulo 4","Articulo 5"];
+  variableD: any = ["$10", "$20", "$30","$40","50"];
   
 }
