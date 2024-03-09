@@ -15,6 +15,11 @@
 
   <div id="container">
     <strong>Ready to create an app?</strong>
-    <p>1 Creacion de la App <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <p>2 Directiva: *ngIF <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <p *ngIf="variableA">(*ngIf="variableA") La variableA es verdadeda, por lo tanto puedes leer este parrafo</p>
+    <p *ngIf="!variableA">La variableA es !verdadeda, por lo tanto NO se muestra este parrafo</p>
+    <p *ngIf="variableB">La variableB es falsa, por lo tanto NO se muestra este parrafo</p>
+    <p *ngIf="!variableB">(*ngIf="!variableB") La variableB es !falsa, por lo tanto puedes leer este parrafo</p>
+
   </div>
 </ion-content>

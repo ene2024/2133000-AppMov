@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   constructor() {}
-
+  //Variables que son Usadas para ngIF
+  variableA: boolean=true;
+  variableB: boolean=false;
+  
 }
