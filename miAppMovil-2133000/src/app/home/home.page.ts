@@ -18,4 +18,7 @@ export class HomePage {
 
   //Variable que son Usadas por [ngClass]
   variableE: boolean[] = [true,true,false,false,true];
+
+  //Variable usada para el Databinding interpolacion de cadenas
+  variableF: string = "MiAppMovil-2133000";
 }

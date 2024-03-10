@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      MiAppMovil-2133000
+      {{variableF}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -30,5 +30,9 @@
     <div [ngClass] = "{'articuloV':variableE[i], 'articuloF':variableE[i]==false}" *ngFor="let articulo of variableC; index as i" >
       <p>{{articulo}}:  {{variableD[i]}}</p>
     </div>
+    <br><br>
+    <strong>5 Databinding: StringInterpolation </strong>
+    <p>Se cambio el titulo de la pagina usando la "variableF" la cual tiene un valor de: {{variableF}}</p>
+    <br><br>
   </div>
 </ion-content>
