@@ -27,4 +27,7 @@ export class HomePage {
     alert(`VariableF: ${this.variableF} \nHiciste Click!\nEjemplo de Enlace de Eventos`);
   }
 
+  //Variable usada para enlace de propiedades
+  imgURL: string = "https://media.tenor.com/a_HnHwV4dS0AAAAM/hey.gif";
+  imgClass: string = "eimagen";
 }

@@ -36,5 +36,14 @@
     <br><br>
     <strong>6 Databinding: Enlace de Eventos </strong>
     <ion-button (click)="clickme()">Click Me!</ion-button>
+    <br><br>
+    
+    <strong>7 Databinding: Enlace de Propiedades </strong>
+    <div class = "E7">
+      <div [class]="imgClass" *ngFor="let articulo of variableC;">
+        <img [src]="imgURL">
+      </div >
+    </div>
+
   </div>
 </ion-content>
