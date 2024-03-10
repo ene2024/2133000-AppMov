@@ -24,5 +24,11 @@
     <div class="articulo" *ngFor="let articulo of variableC; index as i" >
       <p>{{articulo}}:  {{variableD[i]}}</p>
     </div>
+    <br><br>
+    <strong>4 Directiva: [ngClass] </strong>
+    <!-- Si VariableE es falsa, el div se pondra de un color mas oscuro -->
+    <div [ngClass] = "{'articuloV':variableE[i], 'articuloF':variableE[i]==false}" *ngFor="let articulo of variableC; index as i" >
+      <p>{{articulo}}:  {{variableD[i]}}</p>
+    </div>
   </div>
 </ion-content>
