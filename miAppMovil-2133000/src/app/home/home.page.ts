@@ -30,4 +30,7 @@ export class HomePage {
   //Variable usada para enlace de propiedades
   imgURL: string = "https://media.tenor.com/a_HnHwV4dS0AAAAM/hey.gif";
   imgClass: string = "eimagen";
+
+  //Variable usada para enlace de 2 direcciones
+  VariableG: string = '';
 }

@@ -4,9 +4,6 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-top: 50vh;
 }
 
 #container strong {
@@ -104,4 +101,19 @@ ion-button{
 
 .eimagen img{
   border-radius: 5px;
+}
+
+.einput{
+  margin-top: 10px;
+  background-color: rgba(155, 155, 155, 0.501);
+  width: 30%;
+  height: 10vh;
+  margin-left: 35%;
+  border-radius: 10px;
+}
+
+.elabel{
+  position: relative;
+  top:5vh;
+
 }

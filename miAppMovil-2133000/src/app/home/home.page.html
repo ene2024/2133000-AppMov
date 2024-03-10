@@ -37,13 +37,16 @@
     <strong>6 Databinding: Enlace de Eventos </strong>
     <ion-button (click)="clickme()">Click Me!</ion-button>
     <br><br>
-    
     <strong>7 Databinding: Enlace de Propiedades </strong>
     <div class = "E7">
       <div [class]="imgClass" *ngFor="let articulo of variableC;">
         <img [src]="imgURL">
       </div >
     </div>
-
+    <br><br>
+    <strong>8 Databinding: Enlace 2 direcciones </strong>
+    <p>Ingresa lo que quieres mostrar en pantalla:</p>
+    <ion-input class="einput" [(ngModel)]="VariableG"> </ion-input>
+    <ion-label class="elabel">Texto Ingresado: {{VariableG}}</ion-label>
   </div>
 </ion-content>
