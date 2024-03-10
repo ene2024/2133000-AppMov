@@ -21,4 +21,10 @@ export class HomePage {
 
   //Variable usada para el Databinding interpolacion de cadenas
   variableF: string = "MiAppMovil-2133000";
+
+  //Funcion usada para el Databinding de Enlace de Eventos
+  clickme():void{
+    alert(`VariableF: ${this.variableF} \nHiciste Click!\nEjemplo de Enlace de Eventos`);
+  }
+
 }

@@ -6,7 +6,7 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  margin-top: 40vh;
+  margin-top: 50vh;
 }
 
 #container strong {
@@ -74,4 +74,17 @@
 .articuloF:hover{
   background-color:rgb(0, 0, 0);
 
+}
+
+ion-button{
+  display: block;
+  width: 10%;
+  height: 5vh;
+  margin-left:45%;
+  --background: #adadad;
+  --background-hover: #000000;
+  --background-activated: #000000;
+  --background-focused: #000000;
+
+  --color: white;
 }
