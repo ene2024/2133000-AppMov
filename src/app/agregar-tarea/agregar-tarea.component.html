@@ -1,0 +1,60 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Agregar Tarea</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-grid style="height: 100vh;">
+      <!-- Primera fila -->
+      <ion-row style="height: 20vh;">
+        <ion-col size="12" style="height: 100%;">
+          <h1>Nombre de la tarea:</h1>
+          <ion-input label-placement="floating" fill="solid" placeholder="Ingresa el Titulo" style="--background:white;--color:black;font-size: 4vh;" ></ion-input>
+        </ion-col>
+      </ion-row>
+  
+      <!-- Segunda fila -->
+      <ion-row style="height: 20vh;">
+        <ion-col size="12" style="height: 100%;">
+          <h1>Fecha en la que se completará:</h1>
+      <ion-list>
+        <ion-item>
+          <ion-select aria-label="Mes" interface="popover" placeholder="Mes">
+            <ion-select-option value="01">01</ion-select-option>
+            <ion-select-option value="02">02</ion-select-option>
+            <ion-select-option value="03">03</ion-select-option>
+            <ion-select-option value="04">04</ion-select-option>
+            <ion-select-option value="05">05</ion-select-option>
+            <ion-select-option value="06">06</ion-select-option>
+            <ion-select-option value="07">07</ion-select-option>
+            <ion-select-option value="08">08</ion-select-option>
+            <ion-select-option value="09">09</ion-select-option>
+            <ion-select-option value="10">10</ion-select-option>
+            <ion-select-option value="11">11</ion-select-option>
+            <ion-select-option value="12">12</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-select aria-label="Año" interface="popover" placeholder="Año">
+            <ion-select-option value="2024">2024</ion-select-option>
+            <ion-select-option value="2025">2025</ion-select-option>
+            <ion-select-option value="2026">2026</ion-select-option>
+            <ion-select-option value="2027">2027</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+        </ion-col>
+      </ion-row>
+      <!-- Tercera fila -->
+      <ion-row style="height: 50vh;">
+        <ion-col size="12" style="height: 100%;">
+          <ion-input label-placement="floating" fill="solid" placeholder="Ingresa la descripcion" style="--background:white;--color:black;font-size: 2vh;height: 100%;" ></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</ion-app>

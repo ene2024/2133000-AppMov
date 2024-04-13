@@ -1,0 +1,58 @@
+ion-toolbar{
+    background-color: grey;
+    height: 10vh;
+}
+
+ion-title{
+    text-align-last: center;
+    margin-top: 2.5vh;
+    font-size: 5vh;
+}
+
+ion-list{
+    width: 45%;
+    display: inline-block;
+    margin-left:2.5%;
+    margin-right:2.5%;
+    --background:white;
+    background-color: white;
+}
+
+ion-select{
+    --background:white;
+}
+
+ion-item{
+    --background:white;
+    color:black;
+    font-size: 4vh;
+}
+
+h1{
+    font-size: 3vh;
+    margin-top: 0;
+}
+
+.nombre{
+    margin-top:5vh;
+    width: 90%;
+    height: 20%;
+    margin-left:5vw;
+}
+
+.fecha{
+    margin-left:5vw;
+    width: 90%;
+    height: 20%;
+    background-color: red;
+}
+
+.descripcion{
+    margin-left:5vw;
+    width: 90%;
+    height: 50%;
+    background-color: red;
+}
+
+
+

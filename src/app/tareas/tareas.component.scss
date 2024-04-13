@@ -1,0 +1,78 @@
+ion-toolbar{
+    background-color: grey;
+    height: 10vh;
+}
+
+ion-title{
+    text-align-last: center;
+    margin-top: 2.5vh;
+    font-size: 5vh;
+}
+
+ion-card{
+    margin-top: 5vh;
+    margin-left: 5vw;
+    width: 90vw;
+    height: 20vh;
+}
+
+ion-button{
+    display: block;
+    --background: rgba(59, 59, 59, 0.851);
+    --border-radius:0;
+    --border-color:transparent;
+    width: 101%;
+    height: 20%;
+    position: absolute;
+    bottom: -1vh;
+    left:-1vw;
+}
+
+ion-fab-button {
+    --background: rgb(71, 71, 71);
+    --border-radius: 10px;
+    --color: black;
+    margin-bottom: 5vh;
+    margin-right: 5vw;
+    height: 10vh;
+    width: 10vh;
+  }
+
+  
+
+.espacioTitulo{
+width: 100%;
+height: 20%;
+background-color: rgb(71, 71, 71);
+display: block;
+position: relative;
+top: -5%;
+}
+
+.espacioTitulo h1{
+    font-size:3vh;
+    margin:1vh;
+    color:white;
+}
+
+.espacioFecha{
+    width: 100%;
+    height: 60%;
+    display: block;
+    position: relative;
+    top:-10%;
+}
+
+.espacioFecha h1{
+    font-size:2vh;
+    margin:1vh;
+    color:white;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.espacioFecha p{
+    display: inline-block;
+    color: white;
+    font-size: 2vh;
+}
