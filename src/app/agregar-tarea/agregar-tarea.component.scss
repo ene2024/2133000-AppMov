@@ -28,6 +28,17 @@ ion-item{
     font-size: 4vh;
 }
 
+ion-button{
+    display: block;
+    --background: rgba(59, 59, 59, 0.851);
+    --border-radius:0;
+    --border-color:transparent;
+    width: 100%;
+    height: 20%;
+    margin-top: 1vh;
+    left:-1vh;
+}
+
 h1{
     font-size: 3vh;
     margin-top: 0;
