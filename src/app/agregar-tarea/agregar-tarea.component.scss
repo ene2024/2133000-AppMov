@@ -39,6 +39,16 @@ ion-button{
     left:-1vh;
 }
 
+ion-fab-button {
+    --background: rgb(71, 71, 71);
+    --border-radius: 10px;
+    --color: black;
+    margin-bottom: 5vh;
+    margin-left: 5vw;
+    height: 10vh;
+    width: 10vh;
+  }
+
 h1{
     font-size: 3vh;
     margin-top: 0;
