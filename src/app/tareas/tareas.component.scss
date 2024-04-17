@@ -1,12 +1,11 @@
-ion-toolbar{
-    background-color: grey;
-    height: 10vh;
+ion-header{
+    background-color: transparent;
+    height: 6vh;
 }
 
 ion-title{
     text-align-last: center;
-    margin-top: 2.5vh;
-    font-size: 5vh;
+    font-size: 3vh;
 }
 
 ion-card{
@@ -36,7 +35,7 @@ ion-fab-button {
     margin-right: 5vw;
     height: 10vh;
     width: 10vh;
-  }
+}
 
   
 
@@ -46,13 +45,13 @@ height: 20%;
 background-color: rgb(71, 71, 71);
 display: block;
 position: relative;
-top: -5%;
 }
 
 .espacioTitulo h1{
-    font-size:3vh;
-    margin:1vh;
+    font-size:2.5vh;
     color:white;
+    margin:0;
+    margin-left:1vh;
 }
 
 .espacioFecha{
@@ -60,12 +59,12 @@ top: -5%;
     height: 60%;
     display: block;
     position: relative;
-    top:-10%;
 }
 
 .espacioFecha h1{
     font-size:2vh;
-    margin:1vh;
+    margin:0;
+    margin-left:1vh;
     color:white;
     display: inline-block;
     font-weight: bold;

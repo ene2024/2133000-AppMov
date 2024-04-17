@@ -1,0 +1,21 @@
+<ion-app>
+  <ion-content>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>{{tarea.titulo}}</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <div>
+      <h1>{{tarea.fechaMes}}/{{tarea.fechaAnio}}</h1>
+    </div>
+    <div>
+      <p>{{tarea.descripcion}}</p>
+    </div>
+    
+    <ion-fab slot="fixed" vertical="bottom" horizontal="start" (click)="cerrarDetalles()">
+      <ion-fab-button>
+        <ion-icon name="arrow-undo-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-content>
+</ion-app>

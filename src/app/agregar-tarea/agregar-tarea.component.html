@@ -6,60 +6,66 @@
   </ion-header>
 
   <ion-content>
-    <ion-grid style="height: 100vh;">
-      <!-- Primera fila -->
-      <ion-row style="height: 20vh;">
-        <ion-col size="12" style="height: 100%;">
-          <h1>Nombre de la tarea:</h1>
-          <ion-input label-placement="floating" fill="solid" placeholder="Ingresa el Titulo" style="--background:white;--color:black;font-size: 4vh;" ></ion-input>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="detallesTarea">
+          <h1>Ingrese los datos:{{tareaNueva.titulo}}</h1>
+          <ion-input label="Nombre de la Tarea" label-placement="floating" fill="outline" placeholder="Titulo" [(ngModel)]="tareaNueva.titulo"></ion-input>
         </ion-col>
       </ion-row>
-  
-      <!-- Segunda fila -->
-      <ion-row style="height: 20vh;">
-        <ion-col size="12" style="height: 100%;">
-          <h1>Fecha en la que se completará:</h1>
-      <ion-list>
-        <ion-item>
-          <ion-select aria-label="Mes" interface="popover" placeholder="Mes">
-            <ion-select-option value="01">01</ion-select-option>
-            <ion-select-option value="02">02</ion-select-option>
-            <ion-select-option value="03">03</ion-select-option>
-            <ion-select-option value="04">04</ion-select-option>
-            <ion-select-option value="05">05</ion-select-option>
-            <ion-select-option value="06">06</ion-select-option>
-            <ion-select-option value="07">07</ion-select-option>
-            <ion-select-option value="08">08</ion-select-option>
-            <ion-select-option value="09">09</ion-select-option>
-            <ion-select-option value="10">10</ion-select-option>
-            <ion-select-option value="11">11</ion-select-option>
-            <ion-select-option value="12">12</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
-      <ion-list>
-        <ion-item>
-          <ion-select aria-label="Año" interface="popover" placeholder="Año">
-            <ion-select-option value="2024">2024</ion-select-option>
-            <ion-select-option value="2025">2025</ion-select-option>
-            <ion-select-option value="2026">2026</ion-select-option>
-            <ion-select-option value="2027">2027</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list>
+      <ion-row>
+        <h2>Fecha de la tarea:{{tareaNueva.fechaMes}}/{{tareaNueva.fechaAnio}}</h2>
+      </ion-row>
+      <ion-row>
+        <ion-col class="detallesTarea">
+          <ion-list>
+            <ion-item>
+              <ion-select aria-label="Mes" interface="popover" placeholder="Mes" [(ngModel)]="tareaNueva.fechaMes">
+                <ion-select-option value="01">Enero</ion-select-option>
+                <ion-select-option value="02">Febrero</ion-select-option>
+                <ion-select-option value="03">Marzo</ion-select-option>
+                <ion-select-option value="04">Abril</ion-select-option>
+                <ion-select-option value="05">Mayo</ion-select-option>
+                <ion-select-option value="06">Junio</ion-select-option>
+                <ion-select-option value="07">Julio</ion-select-option>
+                <ion-select-option value="08">Agosto</ion-select-option>
+                <ion-select-option value="09">Septiembre</ion-select-option>
+                <ion-select-option value="10">Octubre</ion-select-option>
+                <ion-select-option value="11">Noviembre</ion-select-option>
+                <ion-select-option value="12">Diciembre</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+        <ion-col class="detallesTarea">
+          <ion-list>
+            <ion-item>
+              <ion-select aria-label="Año" interface="popover" placeholder="Año" [(ngModel)]="tareaNueva.fechaAnio">
+                <ion-select-option value="2023">2023</ion-select-option>
+                <ion-select-option value="2024">2024</ion-select-option>
+                <ion-select-option value="2025">2025</ion-select-option>
+                <ion-select-option value="2026">2026</ion-select-option>
+                <ion-select-option value="2027">2027</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
         </ion-col>
       </ion-row>
-      <!-- Tercera fila -->
-      <ion-row style="height: 40vh;">
-        <ion-col size="12" style="height: 100%;">
-          <ion-input label-placement="floating" fill="solid" placeholder="Ingresa la descripcion" style="--background:white;--color:black;font-size: 2vh;height: 100%;" ></ion-input>
-          <ion-button>Agregar</ion-button>
+      <ion-row>
+        <h2>Descripcion de la Tarea:{{tareaNueva.descripcion}}</h2>
+      </ion-row>
+      <ion-row>
+        <ion-col class="descripcionTarea">
+          <ion-textarea [autoGrow]="true" [(ngModel)]="tareaNueva.descripcion" ></ion-textarea>
         </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-button [disabled]="tareaNueva.titulo===''||tareaNueva.fechaAnio===null||tareaNueva.fechaMes===null||tareaNueva.descripcion===''" (click)="agregarTarea()">Agregar Tarea</ion-button>
       </ion-row>
     </ion-grid>
-    <ion-fab slot="fixed" vertical="bottom" horizontal="start">
+    <ion-fab slot="fixed" vertical="bottom" horizontal="start" (click)="cerrarmodal()">
       <ion-fab-button>
-        <a routerLink="/tareas"><ion-icon name="arrow-undo-outline"></ion-icon></a>
+        <ion-icon name="arrow-undo-outline"></ion-icon>
       </ion-fab-button>
     </ion-fab>
   </ion-content>

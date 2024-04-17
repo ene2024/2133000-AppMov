@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { AgregarTareaComponent } from './agregar-tarea/agregar-tarea.component';
-import { TareasComponent } from './tareas/tareas.component';
 
 const routes: Routes = [
   {
-    path:'agregar-tarea', component:AgregarTareaComponent
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
-    path:'tareas',component:TareasComponent
-  }
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({
@@ -19,4 +20,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents =[AgregarTareaComponent,TareasComponent]

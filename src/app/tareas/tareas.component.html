@@ -6,39 +6,19 @@
   </ion-header>
 
   <ion-content>
-    <ion-card>
+    <ion-card *ngFor="let tarea of tareas; index as i">
       <div class="espacioTitulo">
-        <h1>Titulo</h1>
+        <h1>{{tarea.titulo}}</h1>
       </div>
       <div class="espacioFecha">
-        <h1>Fecha:</h1> <p>10/10/2020</p>
+        <h1>Fecha:  </h1> <p>  {{tarea.fechaMes}}/{{tarea.fechaAnio}}</p>
       </div>
-      <ion-button>+Ver mas Detalles</ion-button>
+      <ion-button (click)="abrirDetalles(tarea)">+Ver mas Detalles</ion-button>
     </ion-card>
 
-    <ion-card>
-      <div class="espacioTitulo">
-        <h1>Titulo</h1>
-      </div>
-      <div class="espacioFecha">
-        <h1>Fecha:</h1> <p>10/10/2020</p>
-      </div>
-      <ion-button>+Ver mas Detalles</ion-button>
-    </ion-card>
-
-    <ion-card>
-      <div class="espacioTitulo">
-        <h1>Titulo</h1>
-      </div>
-      <div class="espacioFecha">
-        <h1>Fecha:</h1> <p>10/10/2020</p>
-      </div>
-      <ion-button>+Ver mas Detalles</ion-button>
-    </ion-card>
-
-    <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end" (click)="abrirAgregarTarea()">
       <ion-fab-button>
-        <a routerLink="/agregar-tarea"><ion-icon name="add"></ion-icon></a>
+        <ion-icon name="add"></ion-icon>
       </ion-fab-button>
     </ion-fab>
 
