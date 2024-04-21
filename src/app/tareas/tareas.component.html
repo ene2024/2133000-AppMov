@@ -9,9 +9,12 @@
     <ion-card style="height: auto;" *ngFor="let tarea of tareas; index as i">
       <div class="espacioTitulo">
         <h1>{{tarea.titulo}}</h1>
+        <div class="botonEliminar">
+          <ion-icon (click) = "eliminartarea(i)" name="trash"></ion-icon>
+        </div>
       </div>
       <div class="espacioFecha">
-        <h1>Fecha:  </h1> <p>  {{tarea.fechaMes}}/{{tarea.fechaAnio}}</p>
+        <h1>Fecha:</h1> <p>{{tarea.fechaMes}}/{{tarea.fechaAnio}}</p>
       </div>
       <ion-accordion-group>
         <ion-accordion value="first">

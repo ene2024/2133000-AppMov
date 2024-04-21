@@ -95,3 +95,18 @@ position: relative;
 .espacioAlerta{
     text-align: center;
 }
+
+.botonEliminar{
+    position: absolute;
+    right: 0;
+    top:0;
+    width: 10%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.botonEliminar ion-icon{
+    width:100%;
+    height: 100%;
+    align-items: center;
+}

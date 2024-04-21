@@ -30,5 +30,8 @@ export class TareasComponent  implements OnInit {
     return await modal.present();
   }
   
+  eliminartarea(n:number){
+    this.tareasServicio.deleteTarea(n);
+  }
 
 }
