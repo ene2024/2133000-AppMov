@@ -75,3 +75,23 @@ position: relative;
     color: white;
     font-size: 2vh;
 }
+
+.image{
+    margin-top: 5vh;
+    display: inline-flex;
+    height: 50vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.image img{
+    width: auto;
+    height: 100%;
+    
+}
+
+.espacioAlerta{
+    text-align: center;
+}

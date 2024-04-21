@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, output } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { tareaEstructura } from 'src/interfaces/tareaEstructura';
-import { Output } from '@angular/core';
+import { TareasService } from '../tareas.service';
 
 @Component({
   selector: 'app-agregar-tarea',
@@ -10,9 +10,17 @@ import { Output } from '@angular/core';
 })
 
 export class AgregarTareaComponent  implements OnInit {
+  isButtonDisabled: boolean = true;
 
-  constructor(private modalController:ModalController) { }
-  
+  constructor(private modalController:ModalController, private tareasServicio: TareasService) { }
+  tareas:tareaEstructura[]=this.tareasServicio.tareas;
+  tareaNueva: tareaEstructura={
+    titulo:'',
+    fechaAnio:0,
+    fechaMes:0,
+    descripcion:""
+  };
+
   ngOnInit() {
     
   }
@@ -21,16 +29,10 @@ export class AgregarTareaComponent  implements OnInit {
       this.modalController.dismiss();
   }
 
-
-  agregarTarea(){
-    this.modalController.dismiss(this.tareaNueva);
+  agregarTarea():void{
+    this.tareasServicio.addTarea(this.tareaNueva);
+    this.tareasServicio.isEmpty();
+    this.cerrarmodal();
   }
 
-
-  tareaNueva: tareaEstructura = {
-    titulo:'',
-    fechaMes:0,
-    fechaAnio:0,
-    descripcion:''
-  };
 }

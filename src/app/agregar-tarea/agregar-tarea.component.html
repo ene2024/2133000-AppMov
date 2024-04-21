@@ -1,6 +1,11 @@
 <ion-app>
   <ion-header>
     <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)=cerrarmodal()>
+          <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+        </ion-buttons>
       <ion-title>Agregar Tarea</ion-title>
     </ion-toolbar>
   </ion-header>
@@ -9,7 +14,7 @@
     <ion-grid>
       <ion-row>
         <ion-col class="detallesTarea">
-          <h1>Ingrese los datos:{{tareaNueva.titulo}}</h1>
+          <h1>Ingrese los datos:</h1>
           <ion-input label="Nombre de la Tarea" label-placement="floating" fill="outline" placeholder="Titulo" [(ngModel)]="tareaNueva.titulo"></ion-input>
         </ion-col>
       </ion-row>
@@ -63,10 +68,5 @@
         <ion-button [disabled]="tareaNueva.titulo===''||tareaNueva.fechaAnio===null||tareaNueva.fechaMes===null||tareaNueva.descripcion===''" (click)="agregarTarea()">Agregar Tarea</ion-button>
       </ion-row>
     </ion-grid>
-    <ion-fab slot="fixed" vertical="bottom" horizontal="start" (click)="cerrarmodal()">
-      <ion-fab-button>
-        <ion-icon name="arrow-undo-outline"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
   </ion-content>
 </ion-app>
