@@ -30,8 +30,9 @@ export class TareasService {
 
 
   deleteTarea(n: number) {
+    console.log(n);
     if (n != 0) {
-      this.tareas.splice(1, n);
+      this.tareas.splice(n, 1);
     }
 
     else if (this.tareas.length == 1) {
