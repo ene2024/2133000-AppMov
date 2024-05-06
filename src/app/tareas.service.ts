@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { tareaEstructura } from 'src/interfaces/tareaEstructura';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -7,14 +8,12 @@ import { tareaEstructura } from 'src/interfaces/tareaEstructura';
 export class TareasService {
 
   tareas: tareaEstructura[] = [{
-    titulo: "asdas",
+    titulo: "Prueba de Tarea",
     fechaAnio: 0,
     fechaMes: 0,
-    descripcion: ""
+    descripcion: "Prueba de Descripcios"
   }];
   emptyTareas: boolean;
-
-  constructor() { }
 
   addTarea(tareaNuevaR: tareaEstructura): void {
     if (this.tareas[0].fechaAnio === 0) {
@@ -57,6 +56,10 @@ export class TareasService {
     else {
       this.emptyTareas = false;
     }
+  }
+
+  getTerea(id:number){
+    return this.tareas[id]
   }
 
 }

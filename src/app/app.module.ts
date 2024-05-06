@@ -11,9 +11,10 @@ import { TareasComponent } from './tareas/tareas.component';
 import { AgregarTareaComponent } from './agregar-tarea/agregar-tarea.component';
 import { FormsModule } from '@angular/forms';
 import { TareaComponent } from './tarea/tarea.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent,TareasComponent,AgregarTareaComponent,TareaComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule ],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,FormsModule,HttpClientModule ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

@@ -34,4 +34,6 @@ export class TareasComponent  implements OnInit {
     this.tareasServicio.deleteTarea(n);
   }
 
+  imageurl:string="https://t2.ea.ltmcdn.com/es/posts/8/5/4/por_que_mi_perro_esta_triste_3458_orig.jpg";
+
 }

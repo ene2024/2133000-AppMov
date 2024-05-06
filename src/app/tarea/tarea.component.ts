@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { tareaEstructura } from 'src/interfaces/tareaEstructura';
 import { ModalController } from '@ionic/angular';
-import { Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { TareasService } from '../tareas.service';
+import { ConsultaimagenesService } from '../consultaimagenes.service';
 
 @Component({
   selector: 'app-tarea',
@@ -10,13 +11,34 @@ import { Input } from '@angular/core';
 })
 export class TareaComponent  implements OnInit {
 
-  constructor(private modalController:ModalController) { }
+  constructor(private modalController:ModalController,private ruta : ActivatedRoute,public tareasServicio: TareasService,private image: ConsultaimagenesService) { }
 
-  ngOnInit() {}
+  idTarea: number = this.ruta.snapshot.params['id'];
+
+  ngOnInit() {
+    this.getimages();
+  }
 
   async cerrarDetalles() {
     this.modalController.dismiss();
   }
 
-  @Input() tarea: tareaEstructura;
+  tarea=this.tareasServicio.getTerea(this.idTarea);
+
+  imageinfo:any[]=[];
+
+  getimages(): any{
+    this.image.getImages()
+    .subscribe((resp: Object) => {      
+    console.log(resp);
+    this.imageinfo= resp as any[];
+    });
+  }
+
+  random(){
+    return (Math.trunc(Math.random()*100));
+  }
+
 }
+
+

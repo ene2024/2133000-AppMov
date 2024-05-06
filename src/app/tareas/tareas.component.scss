@@ -20,11 +20,12 @@ ion-button{
     --background: rgba(59, 59, 59, 0.851);
     --border-radius:0;
     --border-color:transparent;
-    width: 101%;
+    width: 20%;
     height: 20%;
     position: absolute;
-    bottom: -1vh;
-    left:-1vw;
+    right: 0;
+    bottom: 0;
+    font-size: 3vw;
 }
 
 ion-fab-button {
@@ -37,34 +38,47 @@ ion-fab-button {
     width: 10vh;
 }
 
-  
+.espacioTarea{
+    height: auto;
 
+}
+  
 .espacioTitulo{
 width: 100%;
-height: 20%;
+height: 6vh;
 background-color: rgb(71, 71, 71);
 display: block;
 position: relative;
 }
 
 .espacioTitulo h1{
-    font-size:2.5vh;
+    font-size:4vh;
     color:white;
     margin:0;
     margin-left:1vh;
+    display:inline-block;
+
 }
 
 .espacioFecha{
     width: 100%;
-    height: 60%;
+    height: 10vh;
     display: block;
     position: relative;
 }
 
+.icon{
+    display:inline-block;
+    position: absolute;
+    margin-right: 10px;
+    right: 0;
+    height: 100%;
+}
+
 .espacioFecha h1{
-    font-size:2vh;
-    margin:0;
-    margin-left:1vh;
+    font-size:3vh;
+    margin-top:2vh;
+    margin-left:2vw;
     color:white;
     display: inline-block;
     font-weight: bold;
@@ -109,4 +123,13 @@ position: relative;
     width:100%;
     height: 100%;
     align-items: center;
+}
+
+ion-content{
+    height: 95vh;
+    background-color: red;
+}
+
+.descripcionTarea{
+    width: 80%;
 }

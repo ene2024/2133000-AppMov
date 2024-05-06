@@ -6,26 +6,25 @@
   </ion-header>
 
   <ion-content *ngIf="!this.tareasServicio.emptyTareas">
-    <ion-card style="height: auto;" *ngFor="let tarea of tareas; index as i">
+    <ion-card class="espacioTarea" *ngFor="let tarea of tareas; index as i">
       <div class="espacioTitulo">
-        <h1>{{tarea.titulo}}</h1>
-        <div class="botonEliminar">
-          <ion-icon (click) = "eliminartarea(i)" name="trash"></ion-icon>
-        </div>
+        <h1>{{tarea.titulo}}</h1><ion-icon name="trash" size="large" class="icon" (click)="eliminartarea(i)"></ion-icon>
       </div>
       <div class="espacioFecha">
-        <h1>Fecha:</h1> <p>{{tarea.fechaMes}}/{{tarea.fechaAnio}}</p>
+        <h1>Fecha:</h1> <h1>{{tarea.fechaMes}}/{{tarea.fechaAnio}}</h1>
       </div>
       <ion-accordion-group>
         <ion-accordion value="first">
           <ion-item slot="header" color="light">
-            <ion-label>+Ver mas Detalles</ion-label>
+            <ion-label >Vistazo Rapido</ion-label>
           </ion-item>
-          <div class="ion-padding" slot="content">{{tarea.descripcion}}</div>
+          <div class="ion-padding" slot="content"><div class="descripcionTarea">{{tarea.descripcion}}</div>
+          <div><ion-button [routerLink]="['/tarea',i]">Detalles</ion-button></div>
+          </div>
         </ion-accordion>
       </ion-accordion-group>
     </ion-card>
-    <ion-fab slot="fixed" vertical="bottom" horizontal="end" (click)="abrirAgregarTarea()">
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end" (click)="abrirAgregarTarea()" >
       <ion-fab-button>
         <ion-icon name="add"></ion-icon>
       </ion-fab-button>
@@ -33,7 +32,7 @@
   </ion-content>
   <ion-content *ngIf="this.tareasServicio.emptyTareas">
       <div class="image">
-        <img src="https://scontent.fntr12-1.fna.fbcdn.net/v/t39.30808-6/337101376_1392419914891769_6340041861001915920_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEtVA7Uf4hmFsLbKyHWTX16sW_80KWYC26xb_zQpZgLbkG_ZqBFNScxtH1cdI-MC5M26WdIoakJmhtHgZIxLRl3&_nc_ohc=NdkNluLDujgAb4BCqfo&_nc_ht=scontent.fntr12-1.fna&oh=00_AfCRcjUgMk9-InSqgMtxEgzgDUZIvJ8-y_qktZn8tM3H2Q&oe=662A78C2">
+        <img src={{imageurl}}>
       </div>
     <div class="espacioAlerta">
       <h1>Agrega tu primera Tarea!</h1>
